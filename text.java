@@ -2,10 +2,27 @@ import java.util.Scanner;
 
 // person
 class Person{
+    // instance variables
     String name= "mallick";
     int age; 
+    String[] arr = {"Bmw","Lambo"};
+    // method
     void greet(){
         System.out.println("Hello " + name);
+    }
+    // getters
+    int getAge(){
+        return age;
+    }
+    String getName(){
+        return name;
+    }
+    String[] getArr(){
+        return arr;
+    }
+
+    public void parameterMethods(int distance,String direction){
+        System.out.println(direction +" : "+distance);
     }
 }
 
@@ -21,14 +38,19 @@ public class text {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+    
 // furniture object
 furniture x = new furniture();
 x.price = 90;
 x.type = "Table";
-System.out.println(x.type + " : " + x.price);
+// System.out.println(x.type + " : " + x.price);
 // person object/instance
         Person person1 = new Person();
         person1.age = 19;
+        String[] arr = person1.getArr();
+        System.out.println(arr[0]);
+    person1.parameterMethods(12, "North");
+        // System.out.println(person1.getAge() + " " + person1.getName());
         // person1.name = "Abhijeet";
         // System.out.println(person1.name);
         // person1.greet();
