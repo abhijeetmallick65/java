@@ -26,6 +26,27 @@ class Person{
     }
 }
 
+// class frog
+class frog{
+    private String name ;
+    private int age;
+
+    public void setAge(int newAge){
+        age = newAge;
+    }
+    public void setName(String name){
+        // explicitly refer instance variable
+        this.name = name;
+    }
+    public void setNameAge(String name, int age){
+        setAge(age);
+        this.setName(name);
+    }
+    public void getNameAge(){
+        System.out.println(name +" "+age);
+    }
+
+}
 // furniture
 class furniture{
     String type;
@@ -38,7 +59,10 @@ public class text {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-    
+    frog froggy = new frog();
+    froggy.setNameAge("froggy", 12);
+    froggy.getNameAge();
+
 // furniture object
 furniture x = new furniture();
 x.price = 90;
@@ -49,7 +73,7 @@ x.type = "Table";
         person1.age = 19;
         String[] arr = person1.getArr();
         System.out.println(arr[0]);
-    person1.parameterMethods(12, "North");
+    // person1.parameterMethods(12, "North");
         // System.out.println(person1.getAge() + " " + person1.getName());
         // person1.name = "Abhijeet";
         // System.out.println(person1.name);
