@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import ocean.*;
 // person
 class Person{
     // instance variables
@@ -30,7 +30,6 @@ class Person{
 class frog{
     private String name ;
     private int age;
-
     public void setAge(int newAge){
         age = newAge;
     }
@@ -81,25 +80,71 @@ class Machine {
     }
 }
 
+// static and final
+class Media{
+    public String name;
+    public int age;
+    public final static String TYPE = "Human";
+    public static int count = 0;
+    public static int id = 0;
+
+    public void member(String name, int age){
+        this.name = name ;
+        this.age = age;
+        id = count;
+        count++;
+        System.out.println(id + " : " + name +" : "+age);
+    }
+    public static void countCheck(){
+        System.out.println(count);
+    }
+
+    public String toString(){
+        return id + " " + count;
+    }
+}
+
 /**
  * text
  */
 public class text {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-Machine m1 = new Machine("data",1);
+        Mechanic m = new Mechanic();
+        Car c = new Car();
+        m.start();
+        c.stop();
+        Aqua aa = new Aqua();
+        aa.check();
+        System.out.println(c.age);
+        System.out.println(c.b);
+        /*
+        // not allowed
+        // System.out.println(c.name);
+    
+        System.out.println("");
+        System.out.println("hello");
+        Media p1 = new Media();
+        System.out.println(p1);
+        // Scanner input = new Scanner(System.in);
+        // System.out.print("\n" + info);
+         StringBuilder info = new StringBuilder();
+        info.append("My name is :").append(" Abhijeet").toString();
+p1.member("member 1", 12);
+Media.countCheck();
 
-    frog froggy = new frog();
-    froggy.setNameAge("froggy", 12);
-    // froggy.getNameAge();
+        Machine m1 = new Machine("data",1);
 
-// furniture object
-furniture x = new furniture();
-x.price = 90;
-x.type = "Table";
-// System.out.println(x.type + " : " + x.price);
-// person object/instance
+        frog froggy = new frog();
+        froggy.setNameAge("froggy", 12);
+        // froggy.getNameAge();
+
+        // furniture object
+        furniture x = new furniture();
+        x.price = 90;
+        x.type = "Table";
+        // System.out.println(x.type + " : " + x.price);
+        // person object/instance
         Person person1 = new Person();
         person1.age = 19;
         String[] arr = person1.getArr();
@@ -113,7 +158,7 @@ x.type = "Table";
 
 
 
-/*
+
         // print data to console
         System.out.println("");
 
@@ -244,6 +289,6 @@ x.type = "Table";
         System.out.println(arr[0]);
  */
 // close input stream
-input.close();
+// input.close();ss
     }
 }
