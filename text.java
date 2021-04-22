@@ -47,6 +47,25 @@ class frog{
     }
 
 }
+ class Plant {
+    public void grow() {
+        System.out.println("Plant growing");
+    }
+}
+ class Tree extends Plant {
+
+    
+    public void grow() {
+        System.out.println("Tree growing");
+    }
+    
+    public void shedLeaves() {
+        System.out.println("Leaves shedding.");
+    }
+    
+}
+
+
 // furniture
 class furniture{
     String type;
@@ -104,19 +123,52 @@ class Media{
         return id + " " + count;
     }
 }
+class Crew extends Media{
+    public static void countCheck(){
+        System.out.println("Updated");
+    }
+    public void crewDoes(){
+        System.out.println("Reporting");
+    }
 
+}
 /**
  * text
  */
 public class text {
 
     public static void main(String[] args) {
+        Plant plant1 = new Plant();
+        
+        // Tree is a kind of Plant (it extends Plant)
+        Tree tree = new Tree();
+        
+        // Polymorphism guarantees that we can use a child class
+        // wherever a parent class is expected.
+        Plant plant2 = tree;
+        
+        // plant2 references a Tree, so the Tree grow() method is called.
+        plant2.grow();
+        
+        // The type of the reference decided what methods you can actually call;
+        // we need a Tree-type reference to call tree-specific methods.
+        tree.shedLeaves();
+        /*
+        Media m = new Media();
+        Crew c = new Crew();
+        Media cm = c;
+        // m.countCheck();
+        // cm.countCheck();
+        System.out.println(m);
+        System.out.println(cm);
+        c.crewDoes();
+        cm.countCheck();
+        // cm.crewDoes();
          Plant p= new Plant();
          Oak o = new Oak();
          Field f = new Field();
         // protected -- access within same package
         //  p.age;
-        /*
     System.out.println(Media.count);        
     Media m= new Media();
     System.out.println(m.count);
