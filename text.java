@@ -135,14 +135,31 @@ class Crew extends Media{
 /**
  * text
  */
+
+class x implements info{
+    public void print1() {
+        System.out.println("print 1");
+    }
+
+    public void print2(){
+        System.out.println("print2");
+    }
+
+}
 public class text {
 
     public static void main(String[] args) {
-        Plant plant1 = new Plant();
         
+        x o = new x();
+        o.print1();
+        o.print2();
+        info i = new x();
+        i.print2();
+
+        /*
+        Plant plant1 = new Plant();
         // Tree is a kind of Plant (it extends Plant)
         Tree tree = new Tree();
-        
         // Polymorphism guarantees that we can use a child class
         // wherever a parent class is expected.
         Plant plant2 = tree;
@@ -153,7 +170,6 @@ public class text {
         // The type of the reference decided what methods you can actually call;
         // we need a Tree-type reference to call tree-specific methods.
         tree.shedLeaves();
-        /*
         Media m = new Media();
         Crew c = new Crew();
         Media cm = c;
