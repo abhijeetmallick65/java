@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import ocean.*;
+import plant.*;
 // person
 class Person{
     // instance variables
@@ -110,6 +111,16 @@ class Media{
 public class text {
 
     public static void main(String[] args) {
+         Plant p= new Plant();
+         Oak o = new Oak();
+         Field f = new Field();
+        // protected -- access within same package
+        //  p.age;
+        /*
+    System.out.println(Media.count);        
+    Media m= new Media();
+    System.out.println(m.count);
+
         Mechanic m = new Mechanic();
         Car c = new Car();
         m.start();
@@ -118,7 +129,6 @@ public class text {
         aa.check();
         System.out.println(c.age);
         System.out.println(c.b);
-        /*
         // not allowed
         // System.out.println(c.name);
     

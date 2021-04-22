@@ -1,4 +1,4 @@
-class Mechanic{
+public class Mechanic{
 
     private String name = "Machine";
     public int age = 90;
