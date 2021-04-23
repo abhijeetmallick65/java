@@ -111,14 +111,14 @@ public class text {
 
     public static void main(String[] args) {
         Mechanic m = new Mechanic();
-        Car c = new Car();
         m.start();
+        /*
+        Car c = new Car();
         c.stop();
         Aqua aa = new Aqua();
         aa.check();
         System.out.println(c.age);
         System.out.println(c.b);
-        /*
         // not allowed
         // System.out.println(c.name);
     
