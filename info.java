@@ -1,3 +1,3 @@
-public interface info{
+public interface Info{
     public void print2();
 }

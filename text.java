@@ -1,6 +1,8 @@
+import java.lang.ProcessHandle.Info;
 import java.util.Scanner;
 import ocean.*;
 import plant.*;
+/*
 // person
 class Person{
     // instance variables
@@ -132,11 +134,9 @@ class Crew extends Media{
     }
 
 }
-/**
- * text
- */
 
-class x implements info{
+
+class x implements Info{
     public void print1() {
         System.out.println("print 1");
     }
@@ -146,17 +146,52 @@ class x implements info{
     }
 
 }
+
+*/
+class Machine {
+    public void start(){
+        System.out.println("Machine Started !");
+    }
+}
+class Camera extends Machine{
+    public void start(){
+        System.out.println("Camera Started !");
+    }
+    public void snap(){
+        System.out.println("Picture taken !");
+    }
+}
+/**
+ * text
+ */
 public class text {
 
     public static void main(String[] args) {
+
+        Machine machine1 = new Machine();
+        Camera camera1 = new Camera();
+        machine1.start();
+        camera1.start();
+        camera1.snap();
+
+        // Upcasting
+        Machine machine2 = camera1;
+        machine2.start();
+        // Downcasting
+        Machine machine3 =new Camera();
+        Camera camera3 =(Camera)machine3;
+        camera3.snap();
         
+        /*
         x o = new x();
         o.print1();
         o.print2();
-        info i = new x();
         i.print2();
-
-        /*
+        Info i = new x();
+        int[] c = new int[5];
+        c[4] = 5;
+        System.out.println(c[4]);
+        System.out.println(c[0]);
         Plant plant1 = new Plant();
         // Tree is a kind of Plant (it extends Plant)
         Tree tree = new Tree();
