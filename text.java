@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Scanner;
 import ocean.*;
 import plant.*;
+// file
+import java.io.File;
+import java.io.FileNotFoundException;
 /*
 // person
 class Person{
@@ -149,7 +152,6 @@ class x implements Info{
 
 }
 
-*/
 class Machine {
     public void start(){
         System.out.println("Machine Started !");
@@ -163,6 +165,16 @@ class Camera extends Machine{
         System.out.println("Picture taken !");
     }
 }
+*/
+class Machine {
+    public void start(){
+        System.out.println("Machine started");
+    }
+
+} 
+interface Plant{
+    public void grow();
+}
 /**
  * text
  */
@@ -172,10 +184,43 @@ public class text {
      *
      */
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException{
+
+        /*
+        String path = "D:/Courses/@Java/eample.txt";
+        String s = new String("this is a string");
+        System.out.println(s);
+        System.out.println(path.length());
+        File file = new File(path);
+        Scanner in = new Scanner(file);
+        int count = 0;
+        int value = in.nextInt();
+
+        // to read the next line character -- carrige return line feed
+        in.nextLine();
+        System.out.println(value);
+        while(in.hasNextLine()){
+            String line = in.nextLine();
+            System.out.println(count + " : " +line);
+            count++;
+        }
+        in.close();
+
+        // Anonymous classes
+        Machine machine  = new Machine(){
+            public void start(){
+                System.out.println("anonymous started");
+            }
+        };
+        machine.start();
+        Plant plant = new Plant(){
+            public void grow(){
+                System.out.println("plant grow");
+            }
+        };
+        plant.grow();
 
         // generics
-        /*
         HashMap<Integer,String> hash= new HashMap<>();
         ArrayList<String> arr = new ArrayList<String>();
         arr.add("dog");
@@ -254,7 +299,7 @@ public class text {
         Media p1 = new Media();
         System.out.println(p1);
         // Scanner input = new Scanner(System.in);
-        // System.out.print("\n" + info);
+        // System.out.print("/n" + info);
          StringBuilder info = new StringBuilder();
         info.append("My name is :").append(" Abhijeet").toString();
 p1.member("member 1", 12);
