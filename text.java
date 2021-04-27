@@ -1,4 +1,6 @@
 import java.lang.ProcessHandle.Info;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 import ocean.*;
 import plant.*;
@@ -166,8 +168,20 @@ class Camera extends Machine{
  */
 public class text {
 
+    /**
+     *
+     */
+
     public static void main(String[] args) {
 
+        // generics
+        /*
+        HashMap<Integer,String> hash= new HashMap<>();
+        ArrayList<String> arr = new ArrayList<String>();
+        arr.add("dog");
+        arr.add("cat");
+        System.out.println(arr.get(1));
+        System.out.println("PRINT");
         Machine machine1 = new Machine();
         Camera camera1 = new Camera();
         machine1.start();
@@ -182,7 +196,6 @@ public class text {
         Camera camera3 =(Camera)machine3;
         camera3.snap();
         
-        /*
         x o = new x();
         o.print1();
         o.print2();
