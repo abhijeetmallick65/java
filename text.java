@@ -4,9 +4,12 @@ import java.util.HashMap;
 import java.util.Scanner;
 import ocean.*;
 import plant.*;
+import java.io.*;
+import java.io.BufferedReader;
 // file
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 /*
 // person
 class Person{
@@ -165,16 +168,16 @@ class Camera extends Machine{
         System.out.println("Picture taken !");
     }
 }
-*/
 class Machine {
     public void start(){
         System.out.println("Machine started");
     }
-
+    
 } 
 interface Plant{
     public void grow();
 }
+*/
 /**
  * text
  */
@@ -185,8 +188,23 @@ public class text {
      */
 
     public static void main(String[] args) throws FileNotFoundException{
-
         /*
+        File file = new File("example.txt");
+        try (BufferedWriter br = new BufferedWriter(new FileWriter(file))){
+            br.write("New line added");
+            br.newLine();
+        } catch (Exception e) {
+            //TODO: handle exception
+            System.out.println("unable to read : "+ file.toString());
+        }
+        tryWithResources tr = new tryWithResources();
+        tr.resource();
+        fileReader eh = new fileReader();
+        eh.method();
+        Camera camera = new Camera();
+        camera.setId(5);
+        camera.getId();
+        camera.run();
         String path = "D:/Courses/@Java/eample.txt";
         String s = new String("this is a string");
         System.out.println(s);
