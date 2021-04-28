@@ -188,7 +188,20 @@ public class text {
      */
 
     public static void main(String[] args) throws FileNotFoundException{
-        /*
+         /*
+        Double d = 9.7;
+        Double dd = 9.7;
+        System.out.println(d == dd);
+        System.out.println(d.equals(dd));
+        Integer num1 = 6;
+        Integer num2 = 6;
+        System.out.println(num1 == num2);
+        System.out.println(num1.equals(num2));
+        String s = "hello";
+        String g  = "gello";
+        System.out.println(s== g);
+        System.out.println(s.equals(g));
+       
         File file = new File("example.txt");
         try (BufferedWriter br = new BufferedWriter(new FileWriter(file))){
             br.write("New line added");
