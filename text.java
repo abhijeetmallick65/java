@@ -2,8 +2,10 @@ import java.lang.ProcessHandle.Info;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-import ocean.*;
+
+import Robot.Brain;
 import plant.*;
+import ocean.*;
 import java.io.*;
 import java.io.BufferedReader;
 // file
@@ -177,6 +179,41 @@ class Machine {
 interface Plant{
     public void grow();
 }
+class Machines{
+    Machines(){
+        this.toString();
+    }
+    public String toString(){
+        return "this is a machine";
+    }
+    public void start(){
+        System.out.println("machine started");
+    }
+}
+class Cameras extends Machines{
+
+    public String toString(){
+        return "this is a camera";
+    }
+    public void snap(){
+        System.out.println("taking picture");
+    }
+    public void start(){
+        System.out.println("camera started");
+    }
+}
+
+class Ol extends Field{
+    Ol(int i){
+        super(i);
+    }
+    public void start(){
+        System.out.println(this.i);
+        System.out.println(this.j);
+        System.out.println(this.io);
+        System.out.println(this.y);
+    }
+}
 */
 /**
  * text
@@ -185,10 +222,51 @@ public class text {
 
     /**
      *
-     */
-
+     
+public static void s1(ArrayList<?> machines){
+    for(Object i : machines){
+        System.out.println(i);
+        
+    }
+}
+public static void s2(ArrayList<? extends Machines> machines){
+    for(Machines i : machines){
+        System.out.println(i);
+        i.start();
+    }
+}
+public static void s3(ArrayList<? super Cameras> machines){
+    for(Object i : machines){
+        System.out.println(i);
+    }
+}*/
     public static void main(String[] args) throws FileNotFoundException{
-         /*
+        Robot robot = new Robot(5);
+        robot.start();
+        robot.start();
+        // this only works if brain is declared public 
+        // Robot.Brain brain = robot.new Brain();
+        // brain.think();
+        Robot.Battery battery = new Robot.Battery(); 
+        battery.charge();
+
+
+        /*
+        Ol Ola = new Ol(4);
+        Ola.start();
+        // Machines machines = new Machines();
+        ArrayList<Machines> list = new ArrayList<>();
+        list.add(new Machines());
+        list.add(new Machines());
+        ArrayList<Cameras> list2 = new ArrayList<>();
+        list2.add(new Cameras());
+        list2.add(new Cameras());
+        // s1(list2);
+        s2(list2);
+        
+        
+        int[][] a = new int[3][4];
+        System.out.println(a[3][4]);
         Double d = 9.7;
         Double dd = 9.7;
         System.out.println(d == dd);
