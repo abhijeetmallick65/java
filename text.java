@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import Robot.Brain;
 import plant.*;
 import ocean.*;
 import java.io.*;
@@ -233,30 +232,18 @@ public class text {
      * machines){ System.out.println(i); } }
      */
     public static void main(String[] args) throws FileNotFoundException {
-        Animal animal = Animal.CAT;
-        switch (animal) {
-            case CAT:
-                System.out.println("cat");
-                break;
-            case DOG:
-                System.out.println("dog");
-                break;
-            case MOUSE:
-                System.out.println("mouse");
-                break;
-            default:
-                System.out.println("default");
-        }
-        System.out.println(Animal.DOG);
-        // enum inbuild method
-        System.out.println("Enum name as a string: " + Animal.DOG.name());
-        System.out.println(Animal.DOG.getClass());
-        System.out.println(Animal.DOG instanceof Enum);
-        System.out.println(Animal.valueOf("CAT"));
-        Animal name = Animal.valueOf("CAT");
-        System.out.println("explicit name : " + name);
-        System.out.println(Animal.MOUSE.getName());
+
         /*
+         * Animal animal = Animal.CAT; switch (animal) { case CAT:
+         * System.out.println("cat"); break; case DOG: System.out.println("dog"); break;
+         * case MOUSE: System.out.println("mouse"); break; default:
+         * System.out.println("default"); } System.out.println(Animal.DOG);
+         * System.out.println("Enum name as a string: " + Animal.DOG.name());
+         * System.out.println(Animal.DOG.getClass()); System.out.println(Animal.DOG
+         * instanceof Enum); System.out.println(Animal.valueOf("CAT")); Animal name =
+         * Animal.valueOf("CAT"); System.out.println("explicit name : " + name);
+         * System.out.println(Animal.MOUSE.getName());
+         * 
          * Robot robot = new Robot(5); robot.start(); robot.start(); // this only works
          * if brain is declared public // Robot.Brain brain = robot.new Brain(); //
          * brain.think(); Robot.Battery battery = new Robot.Battery(); battery.charge();
