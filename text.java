@@ -241,6 +241,12 @@ public static void s3(ArrayList<? super Cameras> machines){
     }
 }*/
     public static void main(String[] args) throws FileNotFoundException{
+        linkedlist ll = new linkedlist();
+        ll.insert(0);
+        ll.insert(1);
+        ll.insert(2);
+        ll.display();
+        /*
         Robot robot = new Robot(5);
         robot.start();
         robot.start();
@@ -251,7 +257,6 @@ public static void s3(ArrayList<? super Cameras> machines){
         battery.charge();
 
 
-        /*
         Ol Ola = new Ol(4);
         Ola.start();
         // Machines machines = new Machines();
