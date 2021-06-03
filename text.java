@@ -232,7 +232,9 @@ public class text {
      * machines){ System.out.println(i); } }
      */
     public static void main(String[] args) throws FileNotFoundException {
-
+        Mechanic m = new Mechanic();
+        z xc = new z();
+        xc.ageSum(5);
         /*
          * Animal animal = Animal.CAT; switch (animal) { case CAT:
          * System.out.println("cat"); break; case DOG: System.out.println("dog"); break;
