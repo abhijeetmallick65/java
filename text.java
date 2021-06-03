@@ -222,6 +222,181 @@ public class text {
 
     /**
      *
+<<<<<<< HEAD
+     
+public static void s1(ArrayList<?> machines){
+    for(Object i : machines){
+        System.out.println(i);
+        
+    }
+}
+public static void s2(ArrayList<? extends Machines> machines){
+    for(Machines i : machines){
+        System.out.println(i);
+        i.start();
+    }
+}
+public static void s3(ArrayList<? super Cameras> machines){
+    for(Object i : machines){
+        System.out.println(i);
+    }
+}*/
+    public static void main(String[] args) throws FileNotFoundException{
+        linkedlist ll = new linkedlist();
+        ll.insert(0);
+        ll.insert(1);
+        ll.insert(2);
+        ll.display();
+        /*
+        Robot robot = new Robot(5);
+        robot.start();
+        robot.start();
+        // this only works if brain is declared public 
+        // Robot.Brain brain = robot.new Brain();
+        // brain.think();
+        Robot.Battery battery = new Robot.Battery(); 
+        battery.charge();
+
+
+        Ol Ola = new Ol(4);
+        Ola.start();
+        // Machines machines = new Machines();
+        ArrayList<Machines> list = new ArrayList<>();
+        list.add(new Machines());
+        list.add(new Machines());
+        ArrayList<Cameras> list2 = new ArrayList<>();
+        list2.add(new Cameras());
+        list2.add(new Cameras());
+        // s1(list2);
+        s2(list2);
+        
+        
+        int[][] a = new int[3][4];
+        System.out.println(a[3][4]);
+        Double d = 9.7;
+        Double dd = 9.7;
+        System.out.println(d == dd);
+        System.out.println(d.equals(dd));
+        Integer num1 = 6;
+        Integer num2 = 6;
+        System.out.println(num1 == num2);
+        System.out.println(num1.equals(num2));
+        String s = "hello";
+        String g  = "gello";
+        System.out.println(s== g);
+        System.out.println(s.equals(g));
+       
+        File file = new File("example.txt");
+        try (BufferedWriter br = new BufferedWriter(new FileWriter(file))){
+            br.write("New line added");
+            br.newLine();
+        } catch (Exception e) {
+            //TODO: handle exception
+            System.out.println("unable to read : "+ file.toString());
+        }
+        tryWithResources tr = new tryWithResources();
+        tr.resource();
+        fileReader eh = new fileReader();
+        eh.method();
+        Camera camera = new Camera();
+        camera.setId(5);
+        camera.getId();
+        camera.run();
+        String path = "D:/Courses/@Java/eample.txt";
+        String s = new String("this is a string");
+        System.out.println(s);
+        System.out.println(path.length());
+        File file = new File(path);
+        Scanner in = new Scanner(file);
+        int count = 0;
+        int value = in.nextInt();
+
+        // to read the next line character -- carrige return line feed
+        in.nextLine();
+        System.out.println(value);
+        while(in.hasNextLine()){
+            String line = in.nextLine();
+            System.out.println(count + " : " +line);
+            count++;
+        }
+        in.close();
+
+        // Anonymous classes
+        Machine machine  = new Machine(){
+            public void start(){
+                System.out.println("anonymous started");
+            }
+        };
+        machine.start();
+        Plant plant = new Plant(){
+            public void grow(){
+                System.out.println("plant grow");
+            }
+        };
+        plant.grow();
+
+        // generics
+        HashMap<Integer,String> hash= new HashMap<>();
+        ArrayList<String> arr = new ArrayList<String>();
+        arr.add("dog");
+        arr.add("cat");
+        System.out.println(arr.get(1));
+        System.out.println("PRINT");
+        Machine machine1 = new Machine();
+        Camera camera1 = new Camera();
+        machine1.start();
+        camera1.start();
+        camera1.snap();
+
+        // Upcasting
+        Machine machine2 = camera1;
+        machine2.start();
+        // Downcasting
+        Machine machine3 =new Camera();
+        Camera camera3 =(Camera)machine3;
+        camera3.snap();
+        
+        x o = new x();
+        o.print1();
+        o.print2();
+        i.print2();
+        Info i = new x();
+        int[] c = new int[5];
+        c[4] = 5;
+        System.out.println(c[4]);
+        System.out.println(c[0]);
+        Plant plant1 = new Plant();
+        // Tree is a kind of Plant (it extends Plant)
+        Tree tree = new Tree();
+        // Polymorphism guarantees that we can use a child class
+        // wherever a parent class is expected.
+        Plant plant2 = tree;
+        
+        // plant2 references a Tree, so the Tree grow() method is called.
+        plant2.grow();
+        
+        // The type of the reference decided what methods you can actually call;
+        // we need a Tree-type reference to call tree-specific methods.
+        tree.shedLeaves();
+        Media m = new Media();
+        Crew c = new Crew();
+        Media cm = c;
+        // m.countCheck();
+        // cm.countCheck();
+        System.out.println(m);
+        System.out.println(cm);
+        c.crewDoes();
+        cm.countCheck();
+        // cm.crewDoes();
+         Plant p= new Plant();
+         Oak o = new Oak();
+         Field f = new Field();
+        // protected -- access within same package
+        //  p.age;
+    System.out.println(Media.count);        
+    Media m= new Media();
+    System.out.println(m.count);
+=======
      * 
      * public static void s1(ArrayList<?> machines){ for(Object i : machines){
      * System.out.println(i);
@@ -232,9 +407,14 @@ public class text {
      * machines){ System.out.println(i); } }
      */
     public static void main(String[] args) throws FileNotFoundException {
+<<<<<<< HEAD
         Mechanic m = new Mechanic();
         z xc = new z();
         xc.ageSum(5);
+=======
+>>>>>>> 5af5926e14fe969c914f43611ec56ad5eb8bdf40
+
+>>>>>>> 3f73db5bd218a557ef60471b6e48d0833c35b308
         /*
          * Animal animal = Animal.CAT; switch (animal) { case CAT:
          * System.out.println("cat"); break; case DOG: System.out.println("dog"); break;
